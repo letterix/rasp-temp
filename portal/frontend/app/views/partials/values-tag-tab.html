@@ -1,0 +1,26 @@
+<div class="col-md-12 no-focus" ng-repeat="item in values | filter:search:strict | startFrom:currentPage*numPerPage | limitTo:numPerPage" tabindex="0">
+	<div class="row">
+		<div class="alert item" ng-class="{'alert-info': item.type == 'value', 'alert-success': ((item.type == 'warning' || item.type == 'alarm') && item.value == 0), 'alert-warning': (item.type == 'warning' && item.value == 1), 'alert-danger': (item.type == 'alarm' && item.value == 1),'alert-disconnected': !item.connected}">
+			<div class="item-actions" ng-show="editing">
+				<button class="btn btn-warning" ng-click="$event.stopPropagation(); editItem(item);">Edit</button>
+				<button class="btn btn-danger" ng-click="$event.stopPropagation(); deleteItem(item);">Delete</button>
+			</div>
+			<div class="row">
+				<div class="col-md-4 tag-name">
+					<h3>{{item.name}}</h3>
+				</div>
+				<div class="col-md-4 tag-addr">
+					<h5>Addr: {{item.address}}<h5>
+				</div>
+				<div class="col-md-4">
+					<div class="tag-time">
+						{{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}
+					</div>
+					<div class="tag-value">
+						 Value: <span class="badge">{{item.value}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

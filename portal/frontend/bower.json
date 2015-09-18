@@ -1,0 +1,29 @@
+{
+  "name": "ESBE",
+  "version": "0.0",
+  "dependencies": {
+    "angular": "1.2.5",
+    "angular-route": "latest",
+    "angular-mocks": "latest",
+    "angular-bootstrap": "latest",
+    "angular-ui-slider": "~0.0.1",
+    "ng-table": "~0.3.1",
+    "es5-shim": "~2.1.0",
+    "json3": "~3.2.5",
+    "jquery-migrate": "1.2.1",
+    "bootstrap": "~3.0.3",
+    "underscore": "~1.5.2",
+    "entypo": "",
+    "font-awesome": "~4.0.3",
+    "ff-ng-api": "git@bitbucket.org:softhouse/ff-ng-modules.git#0.0.0",
+    "Ladda": "",
+    "ng-table-export": "",
+    "angular-busy": "~3.0.2",
+    "angular-animate": "~1.2",
+    "angular-promise-tracker": "~1.5",
+    "angular-deckgrid": "~0.4.4",
+    "ng-breadcrumbs": "~0.1.2",
+    "angular-loading-bar": "latest",
+    "angular-multi-select": "latest"
+  }
+}

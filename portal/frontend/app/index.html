@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="app"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+	<meta http-equiv="pragma" content="no-cache" />
+
+	<!-- REMOVED: build:css(.tmp) styles/libs.css -->
+	<link rel="stylesheet" href="components/bootswatch/bootswatch.min.css">
+	<link rel="stylesheet" href="components/ng-table/ng-table.css">
+	<link rel="stylesheet" href="components/jquery-ui/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="components/angular-busy/dist/angular-busy.css">
+	<link rel="stylesheet" href="components/angular-loading-bar/build/loading-bar.min.css">
+	<link rel="stylesheet" href="components/angular-multi-select/angular-multi-select.css">
+
+	<!--link rel="stylesheet" href="components/Ladda/dist/ladda.min.css"-->
+	<link rel="stylesheet" href="components/Ladda/dist/ladda-themeless.min.css">
+
+	<!-- REMOVED: endbuild -->
+
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+
+	<title>Modwatch</title>
+</head>
+<body ng-cloak>
+	<!--[if lt IE 7]>
+	<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true" install Google Chrome Frame</a> to better experience this site.</p>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="components/es5-shim/es5-shim.js"></script>
+	<script src="components/json3/lib/json3.min.js"></script>
+	<![endif]-->
+
+	<div class="fluid-container" ng-cloak >
+		<div class="row">
+			<h1 class="logo">
+			  <span class="word1">Mod</span>
+			  <span class="word2">Watch</span>
+			</h1>
+		</div>
+		<div ng-view>This page requires JavaScript</div>
+		<div ng-include="'views/partials/response-partial.html'"></div>
+	</div>
+
+	<!-- build:js scripts/libs.js -->
+	<script src="components/underscore/underscore.js"></script>
+	<script src="components/angular/angular.js"></script>
+	<script src="components/angular-route/angular-route.js"></script>
+	<script src="components/angular-mocks/angular-mocks.js"></script>
+	<script src="components/ng-table/ng-table.js"></script>
+	<script src="components/Ladda/dist/spin.min.js"></script>
+	<script src="components/Ladda/dist/ladda.min.js"></script>
+	<script src="components/ng-table-export/ng-table-export.js"></script>
+	<script src="components/angular-busy/dist/angular-busy.min.js"></script>
+	<script src="components/angular-animate/angular-animate.min.js"></script>
+	<script src="components/angular-promise-tracker/promise-tracker.min.js"></script>
+	<script src="components/angular-deckgrid/angular-deckgrid.js"></script>
+	<script src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="components/ng-breadcrumbs/dist/ng-breadcrumbs.min.js"></script>
+	<script src="components/angular-loading-bar/build/loading-bar.min.js"></script>
+	<script src="components/angular-multi-select/angular-multi-select.js"></script>
+
+
+	<!-- endbuild -->
+
+	<!-- build:js scripts/main.js -->
+
+	<script src="scripts/app.js"></script>
+	<script src="components/ff-ng-api/ff-ng-api/api-service.js"></script>
+
+	<script src="scripts/controllers/home-ctrl.js"></script>
+	<script src="scripts/controllers/logout-ctrl.js"></script>
+	<script src="scripts/controllers/customers-ctrl.js"></script>
+	<script src="scripts/controllers/customer-ctrl.js"></script>
+	<script src="scripts/controllers/installation-ctrl.js"></script>
+	<script src="scripts/controllers/controller-ctrl.js"></script>
+	<script src="scripts/controllers/log-ctrl.js"></script>
+	<script src="scripts/controllers/users-ctrl.js"></script>
+	<script src="scripts/controllers/edit-customer-ctrl.js"></script>
+	<script src="scripts/controllers/edit-installation-ctrl.js"></script>
+	<script src="scripts/controllers/edit-controller-ctrl.js"></script>
+	<script src="scripts/controllers/edit-tag-ctrl.js"></script>
+	<script src="scripts/controllers/edit-user-ctrl.js"></script>
+
+	<script src="scripts/services/utils-service.js"></script>
+	<script src="scripts/services/find-service.js"></script>
+	<script src="scripts/services/session-service.js"></script>
+	<script src="scripts/services/auth-service.js"></script>
+	<script src="scripts/services/breadcrumbs-service.js"></script>
+
+	<script src="scripts/filters/percentof-filter.js"></script>
+	<script src="scripts/filters/temperature-filter.js"></script>
+	<script src="scripts/filters/start-from.js"></script>
+
+	<script src="scripts/directives/ladda.js"></script>
+	<script src="scripts/directives/match.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

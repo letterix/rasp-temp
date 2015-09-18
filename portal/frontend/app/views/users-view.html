@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="page-header">
+      <div ng-include="'views/partials//breadcrumbs-menu-partial.html'"></div>
+      <h1>{{title}}</h1>
+      <a class="btn btn-success" ng-click="newItem()" ng-hide="!canCreate()"><span class="fa-plus"></span> New</a>
+      <a class="btn btn-warning" ng-click="toggleEditing()"><span class="fa-pencil"></span> Edit</a>
+      <a class="btn btn-primary" ng-click="viewItems()"><span class="fa-home"></span> Units</a>
+    </div>
+  </div>
+  <div class="col-md-8 col-md-offset-2">
+    <div class="row">
+      <div class="input-group">
+        <span class="input-group-addon"><i class="fa-search"></i></span>
+        <input type="text" class="form-control input-lg" ng-model="search.name" placeholder="Search">
+      </div>
+    </div>
+    <div class="row">
+      <div ng-include="'views/partials/users-list-tab.html'"></div>
+    </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class ="fluid-container hakim-pager">
+      <div class="counter">{{currentPage+1}}/{{numPages()}}</div>
+      <button class="paginate left" ng-disabled="currentPage < 1" ng-click="previous();"><i></i><i></i></button>
+      <button class="paginate right" ng-disabled="currentPage > numPages()-2" ng-click="next()"><i></i><i></i></button>
+    </div>
+  </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="page-header">
+      <div ng-include="'views/partials//breadcrumbs-menu-partial.html'"></div>
+      <h1>Configure user</h1>
+    </div>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="form-horizontal" name="itemForm" ng-submit="submitForm()">
+          <fieldset>
+            <legend>{{title}}</legend>
+            <!-- USERNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.username.$invalid && !itemForm.username.$pristine }">
+              <label for="username" class="col-md-2 control-label"> Username </label>
+                <div class="col-md-10">
+                  <input type="text" name="username" id="username" class="form-control" ng-model="item.username" required placeholder="Username" ng-disabled="title != 'New'">
+                  <p ng-show="itemForm.username.$invalid && !itemForm.username.$pristine" class="help-block">Item username is required.</p>
+                </div>
+            </div>
+            <!-- NAME -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.name.$invalid && !itemForm.name.$pristine }">
+              <label for="name" class="col-md-2 control-label"> First name </label>
+              <div class="col-md-10">
+                <input type="text" name="name" id="name" class="form-control" ng-model="item.name" required placeholder="Name">
+                <p ng-show="itemForm.name.$invalid && !itemForm.name.$pristine" class="help-block">Item firstname is required.</p>
+              </div>
+            </div>
+            <!-- SURNAME -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.surname.$invalid && !itemForm.surname.$pristine }">
+              <label for="surname" class="col-md-2 control-label"> Surname </label>
+              <div class="col-md-10">
+                <input type="text" name="surname" id="surname" class="form-control" ng-model="item.surname" required placeholder="Surname">
+                <p ng-show="itemForm.surname.$invalid && !itemForm.surname.$pristine" class="help-block">Item surname is required.</p>
+              </div>
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.email.$invalid && !itemForm.email.$pristine }">
+              <label for="email" class="col-md-2 control-label"> Email </label>
+              <div class="col-md-10">
+                <input type="text" name="email" id="email" class="form-control" ng-model="item.email" required placeholder="Email" ng-pattern="emailRegex">
+                <p ng-show="itemForm.email.$invalid && !itemForm.email.$pristine" class="help-block">Item email is required.</p>
+              </div>
+            </div>
+            <!-- PHONE -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.phone.$invalid && !itemForm.phone.$pristine }">
+              <label for="phone" class="col-md-2 control-label"> Phone </label>
+              <div class="col-md-10">
+                <input type="text" name="phone" id="phone" class="form-control" ng-model="item.phone" required placeholder="phone">
+                <p ng-show="itemForm.phone.$invalid && !itemForm.phone.$pristine" class="help-block">Item phone is required.</p>
+              </div>
+            </div>
+            <!-- ROLE -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.role.$invalid && !itemForm.role.$pristine }" ng-hide="isNormalRole(currentUser.role) && !isAdminRole(currentUser.role)">
+              <label for="role" class="col-md-2 control-label"> Role </label>
+              <div class="col-md-10">
+                <select name="role" id="role" class="form-control" ng-model="item.role" required placeholder="Role" ng-options="role for role in roles" ng-disabled="title != 'New' && item.username === currentUser.username">
+                  <option value="">--- Choose Role ---</option> 
+                </select>
+                <p ng-show="itemForm.role.$invalid && !itemForm.role.$pristine" class="help-block">Item role is required.</p>
+              </div>
+            </div>
+            <!-- CUSTOMER -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.customer.$invalid && !itemForm.customer.$pristine && isNormalRole(item.role) }" ng-show="!isNormalRole(currentUser.role) && !isSuperRole(item.role)">
+              <label for="customer" class="col-md-2 control-label"> Customer </label>
+              <div class="col-md-10">
+                <div     
+                    multi-select
+                    input-model="masterCustomers"
+                    output-model="selectedCustomers"
+                    button-label="name"
+                    item-label="name"
+                    tick-property="ticked"
+                    on-item-click="customersChanged()"
+                    name="customers"
+                    id="customers"
+                    ng-hide="isNormalRole(currentUser.role) || isNormalRole(item.role) || isSuperRole(item.role)"
+                >
+                </div>
+                <select name="customer" id="customer" class="form-control" ng-model="customer" required placeholder="customer" ng-show="isNormalRole(item.role)" ng-options="c.name.capitalize() for c in customers">
+                  <option value="">--- Choose Customer ---</option> 
+                </select>
+                <p ng-show="(itemForm.customer.$invalid && !itemForm.customer.$pristine && (!isNormalRole(currentUser.role) && isNormalRole(item.role))) || (!isNormalRole(currentUser.role) && !isNormalRole(item.role) && !customersPristine && !selectedCustomers.length)" class="help-block">Item role is required.</p>
+              </div>
+            </div>
+            <!-- PASSWORD-->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.password.$invalid && !itemForm.password.$pristine }">
+              <label for="password" class="col-md-2 control-label"> Password </label>
+              <div class="col-md-10">
+                <input type="password" name="password" id="password" class="form-control" ng-model="item.password" ng-required="title == 'New'" placeholder="Password">
+                <p ng-show="itemForm.password.$invalid && !itemForm.password.$pristine" class="help-block">Item password is required.</p>
+              </div>
+            </div>
+            <!-- CONFIRM PASSWORD-->
+            <div class="form-group" ng-class="{ 'has-error' : (itemForm.confirmPassword.$invalid && !itemForm.confirmPassword.$pristine) || itemForm.password.$viewValue != itemForm.confirmPassword.$viewValue}">
+              <label for="confirmPassword" class="col-md-2 control-label"> Confirm password </label>
+              <div class="col-md-10">
+                <input  ensure-Nisse type="password" name="confirmPassword" id="confirmPassword" class="form-control" ng-model="item.confirmPassword" ng-required="title == 'New'" placeholder="Confirm Password" match="item.password">
+                <p ng-show="(itemForm.confirmPassword.$invalid && !itemForm.confirmPassword.$pristine)" class="help-block">Item password is required, must match the password.</p>
+              </div>
+            </div>        
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-2">
+                <button class="btn btn-default" ng-click="viewItems()">Cancel</button>
+                <button type="submit" class="btn btn-primary" ng-click="submit()" ng-disabled="(itemForm.$invalid || (itemForm.$pristine && customersPristine)) || (!isNormalRole(item.role) && !selectedCustomers.length && !isSuperRole(item.role))">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+<div class="col-md-12 no-focus" ng-repeat="item in items | filter:search:strict | startFrom:currentPage*numPerPage | limitTo:numPerPage" tabindex="0" ng-click="viewItem(item)">
+	<div class="row">
+		<div class="alert item" ng-class="{'alert-success': true, 'alert-warning': item.warnings, 'alert-danger': item.alarms, 'alert-disconnected': !item.connected}">
+			<div class="item-actions" ng-show="editing">
+				<button class="btn btn-warning" ng-click="$event.stopPropagation(); editItem(item);">Edit</button>
+				<button class="btn btn-danger" ng-click="$event.stopPropagation(); deleteItem(item);">Delete</button>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<h3>{{item.name}}</h3>
+				</div>
+				<div class="col-md-4">
+					<h4>{{item.paragraph}}<h4>
+				</div>
+				<div class="col-md-4">
+					<div class="alarms">
+						<span class="fa-exclamation-triangle"></span> Alarms <span class="badge"> {{item.alarms}}</span>
+					</div>
+					<div class="warnings">
+						<span class="fa-bell"></span> Warnings <span class="badge"> {{item.warnings}}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

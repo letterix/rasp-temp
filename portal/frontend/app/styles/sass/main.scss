@@ -1,0 +1,244 @@
+@charset "UTF-8";
+@import 'components/hakim-pager.scss';
+@import 'components/breadcrumbs.scss';
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+
+$hover-color: #A1A1A1;
+
+/* fontawesome */
+[class*="fa-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+@mixin no-focus() {
+	&:focus{
+		outline: none;
+	}
+}
+
+.btn {
+  margin-bottom: 1em;
+}
+
+.no-margin-top {
+  margin-top: 0px;
+}
+
+.input-group {
+	margin-bottom: 1em;
+}
+
+.center-box {
+  top: calc(40vh - 150px);
+	padding: 0 1em;
+	h1 {
+		text-align: center;
+		padding: 1em 0;
+	}
+}
+
+.logout {
+	display: inline-block;
+	float: right;
+}
+
+.item {
+  margin: 0px;
+  margin-top: 5px;
+  cursor: pointer;
+  .item-actions {
+  	button {
+  		&.btn-danger {
+  			right: -90px;
+  			top: 40%;
+  			position: absolute;
+  		}
+  		&.btn-warning {
+  			left: -75px;
+  			top: 40%;
+  			position: absolute;
+  		}
+  	}
+  }
+  .user-name {
+  	h3 {
+  		margin-top: 0px;
+  	}
+  }
+  .user-customer {
+  	h5 {
+  		text-align: center;
+  		margin-top: 38px;
+  	}
+  }
+  .user-phone {
+  	h5 {
+  		text-align: right;
+  		margin-top: 38px;
+  	}
+  }
+  .tag-name {
+  	h3 {
+  		text-align:left;
+  		margin-top: 10px;
+  	}
+  }
+  .tag-addr {
+  	h5 {
+  		text-align: center;
+  		margin-top: 17px;
+  	}
+  }
+  .tag-info {
+  	text-align: right;
+  	h5 {	
+  		display: inline-block;
+  		margin-top: 18px;
+  	}
+  	h4 {
+  		display: inline-block;
+  	}
+  }
+  h5 {
+  	margin-bottom: 0px;
+  }
+  h4 {
+  	text-align: center;
+  	margin-top: 29px;
+  	margin-bottom: -15.5px;
+  }
+  &.alert-success {
+  	&:hover {
+  		color: #ffffff;
+			background-color: #449d44;
+			border-color: rgba(0,0,0,0);
+  	}
+  }
+  &.alert-warning {
+  	&:hover {
+  		color: #ffffff;
+			background-color: #ec971f;
+			border-color: rgba(0,0,0,0);
+  	}
+  }
+  &.alert-danger {
+  	&:hover {
+  		color: #ffffff;
+			background-color: #c9302c;
+			border-color: rgba(0,0,0,0);
+  	}
+  }
+  &.alert-info {
+  	&:hover {
+  		color: #ffffff;
+			background-color: #31b0d5;
+			border-color: rgba(0,0,0,0);
+  	}
+  }
+  &.alert-primary {
+  	color: #ffffff;
+		background-color: #df691a;
+		border-color: transparent;
+		&:hover {
+			color: #ffffff;
+			background-color: #b15315;
+			border-color: rgba(0,0,0,0)
+		}
+  }
+  &.alert-disconnected {
+    color: #ffffff;
+    background-color: #acacac;
+    border-color: transparent;
+    &:hover {
+      color: #ffffff;
+      background-color: #c7c7c7;
+      border-color: rgba(0,0,0,0)
+    }
+  }
+  .tag-time {
+    line-height: 2em;
+    text-align: right;
+  }
+  .tag-value {
+    line-height: 2em;
+    text-align: right;
+  }
+  .warnings {
+  	line-height: 2em;
+  	text-align: right;
+  }
+  .alarms {
+  	line-height: 2em;
+  	text-align: right;
+  }
+}
+
+.btn {
+	&.inactive {
+		opacity: 0.5;
+	}
+}
+
+.logo {
+	text-align: center;
+  font: 84px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  margin-bottom: 0.5em;
+}
+
+/* stuff for both words */
+.logo span {
+  position: relative;
+}
+.logo span:before,
+.logo span:after {
+  content: '';
+  position: absolute;
+  border-width: 32px;/* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+/* stuff for 1st word */
+.logo .word1 {
+  color: #df691a;
+  margin-right: -38px;
+  transform: rotateY(180deg);/* using Prefix free */
+  display: inline-block;/* required for transform */
+  z-index: 10;/* stack 1st word on top */
+}
+.logo .word1:before {
+  right: -4px;/* would be left, but we flipped the word */
+  top: -9px;
+  border-top-color: #2b3e50;/* match background color */
+  border-right-color: #2b3e50;/* would be left, but we flipped the word */
+}
+.logo .word1:after {
+  left: 17px;/* would be right, but we flipped the word */
+  bottom: -15px;
+  border-bottom-color: #2b3e50;
+  border-left-color: #2b3e50;/* would be right, but we flipped the word */
+}
+
+/* stuff for 2nd word */
+.logo .word2 {
+  z-index: 0;/* stack 2nd word below */
+}
+.logo .word2:before {
+  left: -4px;
+  top: -6px;
+  border-top-color: #2b3e50;
+  border-left-color: #2b3e50;
+}
+.logo .word2:after {
+  right: -4px;  
+  bottom: 4px;
+  border-bottom-color: #2b3e50;
+  border-right-color: #2b3e50;
+}
+

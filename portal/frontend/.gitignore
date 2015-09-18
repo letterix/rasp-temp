@@ -1,0 +1,11 @@
+*.bak
+*.css
+*.log
+.sass-cache/
+node_modules/
+build/
+libs/
+dist/
+components/
+vendor/
+composer.lock

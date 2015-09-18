@@ -1,0 +1,21 @@
+<div class="col-md-12 no-focus" ng-repeat="item in alarms | filter:search:strict | startFrom:currentPage*numPerPage | limitTo:numPerPage" tabindex="0">
+	<div class="row">
+		<div class="alert item" ng-class="{'alert-warning': item.type == 'warning', 'alert-danger': item.type == 'alarm'}">
+			<div class="item-actions" ng-show="editing">
+				<button class="btn btn-warning" ng-click="$event.stopPropagation(); editItem(item);">Edit</button>
+				<button class="btn btn-danger" ng-click="$event.stopPropagation(); deleteItem(item);">Delete</button>
+			</div>
+			<div class="row">
+				<div class="col-md-4 tag-name">
+					<h3>{{item.name}}</h3>
+				</div>
+				<div class="col-md-4 tag-addr">
+					<h5>Addr: {{item.address}}<h5>
+				</div>
+				<div class="col-md-4 tag-info">
+					<h5><span ng-class="{'fa-bell': item.type=='warning', 'fa-warning': item.type=='alarm'}"></span> {{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

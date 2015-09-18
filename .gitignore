@@ -1,0 +1,10 @@
+.project
+.pydevproject
+*.pyc
+__pycache__
+.settings
+.metadata
+RemoteSystemsTempFiles
+Servers
+private/*
+.idea

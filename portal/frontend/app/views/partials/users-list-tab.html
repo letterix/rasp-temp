@@ -1,0 +1,22 @@
+<div class="col-md-12 no-focus" ng-repeat="item in items | filter:search:strict | startFrom:currentPage*numPerPage | limitTo:numPerPage" tabindex="0" ng-click="viewItem(item)">
+  <div class="row">
+    <div class="alert alert-primary item">
+      <div class="item-actions" ng-show="editing">
+        <button class="btn btn-warning" ng-click="$event.stopPropagation(); editItem(item);">Edit</button>
+        <button class="btn btn-danger" ng-click="$event.stopPropagation(); deleteItem(item);">Delete</button>
+      </div>
+      <div class="row user">
+        <div class="col-md-4 user-name">
+          <h3>{{item.name.capitalize()}} {{item.surname.capitalize()}}</h3>
+          <h5>{{getPrettyRole(item.role)}}</h5>
+        </div>
+        <div class="col-md-4 user-customer">
+          <h5 ng-show="item.customer.id != 1">Customer: {{item.customer.name.capitalize()}}<i ng-show="item.customers.length > 1">...</i></h5>
+        </div>
+        <div class="col-md-4 user-phone">
+          <h5>Phone: {{item.phone}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

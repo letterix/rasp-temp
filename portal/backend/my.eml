@@ -1,0 +1,49 @@
+Content-Type: multipart/mixed; boundary="===============3341234101153294196=="
+MIME-Version: 1.0
+Date: Wed, 22 Oct 2014 16:23:55 +0200
+From: =?utf-8?q?Modwatch?= <info@modwatch.se>
+To: Rasmus.Letterkrantz@gmail.com, Rassel92@hotmail.com
+Subject: =?utf-8?q?ALARM=3A_ALARM=5FMIN=5FMAIL_for_controller_kelmo_plc_in_the_DaMachine_installation?=
+
+This is a multi-part message in MIME format.
+--===============3341234101153294196==
+Content-Type: multipart/related; boundary="===============3199049657269191829=="
+MIME-Version: 1.0
+
+--===============3199049657269191829==
+Content-Type: multipart/alternative; boundary="===============5852159717442319505=="
+MIME-Version: 1.0
+
+--===============5852159717442319505==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+QUxBUk0gZm9yIHRhZyB3aXRoIHRoZSBmb2xsb3dpbmcgYXR0cmlidXRlczogPGJyPkN1c3RvbWVy
+OiBFc2JlICgyKSA8YnI+IEluc3RhbGxhdGlvbjogRGFNYWNoaW5lICg2NjAwMjE3NDQ4NzI5Mikg
+PGJyPiBDb250cm9sbGVyOiBrZWxtbyBwbGMgKDE5Mi4xNjguMC4xKTxicj4gVGFnOiA8YnI+ICAg
+IC1OYW1lOiBBTEFSTV9NSU5fTUFJTDxicj4gICAgLUFkZHJlc3M6ICVNVzQ6WDEgPGJyPiAgICAt
+VHlwZTogYWxhcm0gPGJyPiAgICAtVmFsdWU6IDEgPGJyPiAgICAtVGltZTogMjAxNC0xMC0yMlQx
+NjoyMzo0MC41NDYyODc=
+
+--===============5852159717442319505==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+CiAgICAgICAgPGh0bWw+CiAgICAgICAgPGhlYWQ+CiAgICAgICAgPG1ldGEgaHR0cC1lcXVpdj0i
+Y29udGVudC10eXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7Y2hhcnNldD11dGYtOCIgLz4KICAgICAg
+ICA8L2hlYWQ+CiAgICAgICAgPGJvZHk+CiAgICAgICAgPGZvbnQgZmFjZT0idmVyZGFuYSIgc2l6
+ZT0yPkFMQVJNIGZvciB0YWcgd2l0aCB0aGUgZm9sbG93aW5nIGF0dHJpYnV0ZXM6IDxicj5DdXN0
+b21lcjogRXNiZSAoMikgPGJyPiBJbnN0YWxsYXRpb246IERhTWFjaGluZSAoNjYwMDIxNzQ0ODcy
+OTIpIDxicj4gQ29udHJvbGxlcjoga2VsbW8gcGxjICgxOTIuMTY4LjAuMSk8YnI+IFRhZzogPGJy
+PiAgICAtTmFtZTogQUxBUk1fTUlOX01BSUw8YnI+ICAgIC1BZGRyZXNzOiAlTVc0OlgxIDxicj4g
+ICAgLVR5cGU6IGFsYXJtIDxicj4gICAgLVZhbHVlOiAxIDxicj4gICAgLVRpbWU6IDIwMTQtMTAt
+MjJUMTY6MjM6NDAuNTQ2Mjg3PGJyLz48L2ZvbnQ+CiAgICAgICAgPGltZyBzcmM9ImNpZDppbWFn
+ZTAiIGJvcmRlcj0wIC8+CiAgICAgICAgPC9ib2R5PgogICAgICAgIDwvaHRtbD4KICAgICAgICA=
+
+--===============5852159717442319505==--
+
+--===============3199049657269191829==--
+
+--===============3341234101153294196==--

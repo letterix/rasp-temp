@@ -1,0 +1,9 @@
+<div ng-show="response" class="response-area">
+	<ul ng-show="response.success" class="alert alert-success">
+		<li ng-repeat="key in response.success">{{translate(key)}}</li>
+	</ul>
+
+	<ul ng-show="response.error" class="alert alert-danger">
+		<li ng-repeat="key in response.error">{{translate(key)}}</li>
+	</ul>
+</div>

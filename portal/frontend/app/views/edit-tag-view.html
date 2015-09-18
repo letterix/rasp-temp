@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="page-header">
+      <div ng-include="'views/partials//breadcrumbs-menu-partial.html'"></div>
+      <h1>Configure tag</h1>
+    </div>
+  </div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form class="form-horizontal" name="itemForm" ng-submit="submitForm()">
+          <fieldset>
+            <legend>{{title}}</legend>
+            <!-- NAME -->
+            <div class="form-group" ng-class="{ 'has-error' : itemForm.name.$invalid && !itemForm.name.$pristine }" ng-show="title == 'New'">
+              <label for="name" class="col-md-2 control-label"> Name </label>
+              <div class="col-md-10">
+                <input type="text" name="name" id="name" class="form-control" ng-model="item.name" required placeholder="Name">
+                <p ng-show="itemForm.name.$invalid && !itemForm.name.$pristine" class="help-block">Item name is required.</p>
+              </div>
+            </div>
+		        <!-- ADDRESS -->
+		        <div class="form-group" ng-class="{ 'has-error' : itemForm.address.$invalid && !itemForm.address.$pristine }">
+		        	<label for="name" class="col-md-2 control-label"> Address </label>
+              <div class="col-md-10">
+		            <input type="text" name="address" id="address" class="form-control" ng-model="item.address" required placeholder="address">
+		            <p ng-show="itemForm.address.$invalid && !itemForm.address.$pristine" class="help-block">Item address is required.</p>
+		          </div>
+		        </div>
+		        <!-- TYPE -->
+		        <div class="form-group" ng-class="{ 'has-error' : itemForm.type.$invalid && !itemForm.type.$pristine }">
+		        	<label for="name" class="col-md-2 control-label"> Type </label>
+              <div class="col-md-10">
+		            <select name="type" id="type" class="form-control" ng-model="item.type" required placeholder="Type" ng-options="type for type in types">
+		            	<option value="">--- Choose Type ---</option>	
+		            </select>
+		            <p ng-show="itemForm.type.$invalid && !itemForm.type.$pristine" class="help-block">Item type is required.</p>
+		          </div>
+		        </div>    
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-2">
+                <button class="btn btn-default" ng-click="viewItems()">Cancel</button>
+                <button type="submit" class="btn btn-primary" ng-click="submit()" ng-disabled="itemForm.$invalid || itemForm.$pristine || (itemForm.password != itemForm.confirmPassword && !itemForm.confirmPassword.$pristine)">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

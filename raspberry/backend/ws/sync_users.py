@@ -1,0 +1,4 @@
+
+SYNC_USERS = {}
+
+LAST_RECIVED_PING = {}
