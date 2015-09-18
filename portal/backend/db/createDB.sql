@@ -1,5 +1,5 @@
 SET foreign_key_checks = 0;
-use modwatch_dev;
+use letz_dev;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (

@@ -12,9 +12,9 @@ SYNC_PING_FREQUENCY = 30
 
 DATABASE = {
     'host': 'localhost',
-    'dbname': 'modwatch_dev',
-    'user': 'modwatch_dev',
-    'password': 'modwatch_dev'
+    'dbname': 'letz_dev',
+    'user': 'root',
+    'password': 'letz_dev'
 }
 
 TESTDATABASE = {
