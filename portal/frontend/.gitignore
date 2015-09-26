@@ -1,5 +1,4 @@
 *.bak
-*.css
 *.log
 .sass-cache/
 node_modules/

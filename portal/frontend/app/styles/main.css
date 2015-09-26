@@ -1,0 +1,489 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:700);
+/* line 39, sass/components/hakim-pager.scss */
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+/* line 46, sass/components/hakim-pager.scss */
+.paginate {
+  width: 50px;
+  cursor: pointer;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  -webkit-filter: drop-shadow(0 2px 0px rgba(0, 0, 0, 0.2));
+}
+/* line 55, sass/components/hakim-pager.scss */
+.paginate i {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 50px;
+  height: 5px;
+  border-radius: 2.5px;
+  background: white;
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+/* line 67, sass/components/hakim-pager.scss */
+.paginate.left {
+  right: 90%;
+}
+/* line 70, sass/components/hakim-pager.scss */
+.paginate.left i {
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.left i:first-child {
+  -webkit-transform: translate(0, -1px) rotate(40deg);
+  -moz-transform: translate(0, -1px) rotate(40deg);
+  -ms-transform: translate(0, -1px) rotate(40deg);
+  transform: translate(0, -1px) rotate(40deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.left i:last-child {
+  -webkit-transform: translate(0, 1px) rotate(-40deg);
+  -moz-transform: translate(0, 1px) rotate(-40deg);
+  -ms-transform: translate(0, 1px) rotate(-40deg);
+  transform: translate(0, 1px) rotate(-40deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.left:hover i:first-child {
+  -webkit-transform: translate(0, -1px) rotate(30deg);
+  -moz-transform: translate(0, -1px) rotate(30deg);
+  -ms-transform: translate(0, -1px) rotate(30deg);
+  transform: translate(0, -1px) rotate(30deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.left:hover i:last-child {
+  -webkit-transform: translate(0, 1px) rotate(-30deg);
+  -moz-transform: translate(0, 1px) rotate(-30deg);
+  -ms-transform: translate(0, 1px) rotate(-30deg);
+  transform: translate(0, 1px) rotate(-30deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.left:active i:first-child {
+  -webkit-transform: translate(1px, -1px) rotate(25deg);
+  -moz-transform: translate(1px, -1px) rotate(25deg);
+  -ms-transform: translate(1px, -1px) rotate(25deg);
+  transform: translate(1px, -1px) rotate(25deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.left:active i:last-child {
+  -webkit-transform: translate(1px, 1px) rotate(-25deg);
+  -moz-transform: translate(1px, 1px) rotate(-25deg);
+  -ms-transform: translate(1px, 1px) rotate(-25deg);
+  transform: translate(1px, 1px) rotate(-25deg);
+}
+/* line 84, sass/components/hakim-pager.scss */
+.paginate.left:disabled {
+  opacity: 0.3;
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.left:disabled i:first-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  -moz-transform: translate(-5px, 0) rotate(0deg);
+  -ms-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.left:disabled i:last-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  -moz-transform: translate(-5px, 0) rotate(0deg);
+  -ms-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.left:disabled:hover i:first-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  -moz-transform: translate(-5px, 0) rotate(0deg);
+  -ms-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.left:disabled:hover i:last-child {
+  -webkit-transform: translate(-5px, 0) rotate(0deg);
+  -moz-transform: translate(-5px, 0) rotate(0deg);
+  -ms-transform: translate(-5px, 0) rotate(0deg);
+  transform: translate(-5px, 0) rotate(0deg);
+}
+/* line 93, sass/components/hakim-pager.scss */
+.paginate.right {
+  left: 90%;
+}
+/* line 96, sass/components/hakim-pager.scss */
+.paginate.right i {
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.right i:first-child {
+  -webkit-transform: translate(0, 1px) rotate(40deg);
+  -moz-transform: translate(0, 1px) rotate(40deg);
+  -ms-transform: translate(0, 1px) rotate(40deg);
+  transform: translate(0, 1px) rotate(40deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.right i:last-child {
+  -webkit-transform: translate(0, -1px) rotate(-40deg);
+  -moz-transform: translate(0, -1px) rotate(-40deg);
+  -ms-transform: translate(0, -1px) rotate(-40deg);
+  transform: translate(0, -1px) rotate(-40deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.right:hover i:first-child {
+  -webkit-transform: translate(0, 1px) rotate(30deg);
+  -moz-transform: translate(0, 1px) rotate(30deg);
+  -ms-transform: translate(0, 1px) rotate(30deg);
+  transform: translate(0, 1px) rotate(30deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.right:hover i:last-child {
+  -webkit-transform: translate(0, -1px) rotate(-30deg);
+  -moz-transform: translate(0, -1px) rotate(-30deg);
+  -ms-transform: translate(0, -1px) rotate(-30deg);
+  transform: translate(0, -1px) rotate(-30deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.right:active i:first-child {
+  -webkit-transform: translate(1px, 1px) rotate(25deg);
+  -moz-transform: translate(1px, 1px) rotate(25deg);
+  -ms-transform: translate(1px, 1px) rotate(25deg);
+  transform: translate(1px, 1px) rotate(25deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.right:active i:last-child {
+  -webkit-transform: translate(1px, -1px) rotate(-25deg);
+  -moz-transform: translate(1px, -1px) rotate(-25deg);
+  -ms-transform: translate(1px, -1px) rotate(-25deg);
+  transform: translate(1px, -1px) rotate(-25deg);
+}
+/* line 110, sass/components/hakim-pager.scss */
+.paginate.right:disabled {
+  opacity: 0.3;
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.right:disabled i:first-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  -moz-transform: translate(5px, 0) rotate(0deg);
+  -ms-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.right:disabled i:last-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  -moz-transform: translate(5px, 0) rotate(0deg);
+  -ms-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 30, sass/components/hakim-pager.scss */
+.paginate.right:disabled:hover i:first-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  -moz-transform: translate(5px, 0) rotate(0deg);
+  -ms-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 34, sass/components/hakim-pager.scss */
+.paginate.right:disabled:hover i:last-child {
+  -webkit-transform: translate(5px, 0) rotate(0deg);
+  -moz-transform: translate(5px, 0) rotate(0deg);
+  -ms-transform: translate(5px, 0) rotate(0deg);
+  transform: translate(5px, 0) rotate(0deg);
+}
+/* line 120, sass/components/hakim-pager.scss */
+.paginate[data-state=disabled] {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* line 128, sass/components/hakim-pager.scss */
+.counter {
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 4em;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* line 4, sass/components/breadcrumbs.scss */
+.breadcrumbs-normal :nth-child(2)::before {
+  display: none;
+}
+
+/* fontawesome */
+/* line 10, sass/main.scss */
+[class*="fa-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* line 20, sass/main.scss */
+.btn {
+  margin-bottom: 1em;
+}
+
+/* line 24, sass/main.scss */
+.no-margin-top {
+  margin-top: 0px;
+}
+
+/* line 28, sass/main.scss */
+.input-group {
+  margin-bottom: 1em;
+}
+
+/* line 32, sass/main.scss */
+.center-box {
+  top: calc(40vh - 150px);
+  padding: 0 1em;
+}
+/* line 35, sass/main.scss */
+.center-box h1 {
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* line 41, sass/main.scss */
+.logout {
+  display: inline-block;
+  float: right;
+}
+
+/* line 46, sass/main.scss */
+.item {
+  margin: 0px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+/* line 52, sass/main.scss */
+.item .item-actions button.btn-danger {
+  right: -90px;
+  top: 40%;
+  position: absolute;
+}
+/* line 57, sass/main.scss */
+.item .item-actions button.btn-warning {
+  left: -75px;
+  top: 40%;
+  position: absolute;
+}
+/* line 65, sass/main.scss */
+.item .user-name h3 {
+  margin-top: 0px;
+}
+/* line 70, sass/main.scss */
+.item .user-customer h5 {
+  text-align: center;
+  margin-top: 38px;
+}
+/* line 76, sass/main.scss */
+.item .user-phone h5 {
+  text-align: right;
+  margin-top: 38px;
+}
+/* line 82, sass/main.scss */
+.item .tag-name h3 {
+  text-align: left;
+  margin-top: 10px;
+}
+/* line 88, sass/main.scss */
+.item .tag-addr h5 {
+  text-align: center;
+  margin-top: 17px;
+}
+/* line 93, sass/main.scss */
+.item .tag-info {
+  text-align: right;
+}
+/* line 95, sass/main.scss */
+.item .tag-info h5 {
+  display: inline-block;
+  margin-top: 18px;
+}
+/* line 99, sass/main.scss */
+.item .tag-info h4 {
+  display: inline-block;
+}
+/* line 103, sass/main.scss */
+.item h5 {
+  margin-bottom: 0px;
+}
+/* line 106, sass/main.scss */
+.item h4 {
+  text-align: center;
+  margin-top: 29px;
+  margin-bottom: -15.5px;
+}
+/* line 112, sass/main.scss */
+.item.alert-success:hover {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: transparent;
+}
+/* line 119, sass/main.scss */
+.item.alert-warning:hover {
+  color: #ffffff;
+  background-color: #ec971f;
+  border-color: transparent;
+}
+/* line 126, sass/main.scss */
+.item.alert-danger:hover {
+  color: #ffffff;
+  background-color: #c9302c;
+  border-color: transparent;
+}
+/* line 133, sass/main.scss */
+.item.alert-info:hover {
+  color: #ffffff;
+  background-color: #31b0d5;
+  border-color: transparent;
+}
+/* line 139, sass/main.scss */
+.item.alert-primary {
+  color: #ffffff;
+  background-color: #df691a;
+  border-color: transparent;
+}
+/* line 143, sass/main.scss */
+.item.alert-primary:hover {
+  color: #ffffff;
+  background-color: #b15315;
+  border-color: transparent;
+}
+/* line 149, sass/main.scss */
+.item.alert-disconnected {
+  color: #ffffff;
+  background-color: #acacac;
+  border-color: transparent;
+}
+/* line 153, sass/main.scss */
+.item.alert-disconnected:hover {
+  color: #ffffff;
+  background-color: #c7c7c7;
+  border-color: transparent;
+}
+/* line 159, sass/main.scss */
+.item .tag-time {
+  line-height: 2em;
+  text-align: right;
+}
+/* line 163, sass/main.scss */
+.item .tag-value {
+  line-height: 2em;
+  text-align: right;
+}
+/* line 167, sass/main.scss */
+.item .warnings {
+  line-height: 2em;
+  text-align: right;
+}
+/* line 171, sass/main.scss */
+.item .alarms {
+  line-height: 2em;
+  text-align: right;
+}
+
+/* line 178, sass/main.scss */
+.btn.inactive {
+  opacity: 0.5;
+}
+
+/* line 183, sass/main.scss */
+.logo {
+  text-align: center;
+  font: 84px 'Arial Narrow', sans-serif;
+  /* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  margin-bottom: 0.5em;
+}
+
+/* stuff for both words */
+/* line 193, sass/main.scss */
+.logo span {
+  position: relative;
+}
+
+/* line 196, sass/main.scss */
+.logo span:before,
+.logo span:after {
+  content: '';
+  position: absolute;
+  border-width: 32px;
+  /* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+/* stuff for 1st word */
+/* line 208, sass/main.scss */
+.logo .word1 {
+  color: #df691a;
+  margin-right: -38px;
+  transform: rotateY(180deg);
+  /* using Prefix free */
+  display: inline-block;
+  /* required for transform */
+  z-index: 10;
+  /* stack 1st word on top */
+}
+
+/* line 215, sass/main.scss */
+.logo .word1:before {
+  right: -4px;
+  /* would be left, but we flipped the word */
+  top: -9px;
+  border-top-color: #2b3e50;
+  /* match background color */
+  border-right-color: #2b3e50;
+  /* would be left, but we flipped the word */
+}
+
+/* line 221, sass/main.scss */
+.logo .word1:after {
+  left: 17px;
+  /* would be right, but we flipped the word */
+  bottom: -15px;
+  border-bottom-color: #2b3e50;
+  border-left-color: #2b3e50;
+  /* would be right, but we flipped the word */
+}
+
+/* stuff for 2nd word */
+/* line 229, sass/main.scss */
+.logo .word2 {
+  z-index: 0;
+  /* stack 2nd word below */
+}
+
+/* line 232, sass/main.scss */
+.logo .word2:before {
+  left: -4px;
+  top: -6px;
+  border-top-color: #2b3e50;
+  border-left-color: #2b3e50;
+}
+
+/* line 238, sass/main.scss */
+.logo .word2:after {
+  right: -4px;
+  bottom: 4px;
+  border-bottom-color: #2b3e50;
+  border-right-color: #2b3e50;
+}

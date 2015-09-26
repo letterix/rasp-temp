@@ -1,0 +1,360 @@
+/*mixins*/
+/* line 39, sass/customer-styles.scss */
+.factory-container {
+  position: relative;
+  opacity: 0.7;
+  width: 40em;
+  height: 40em;
+}
+/* line 40, sass/customer-styles.scss */
+.factory-container .factory {
+  top: 10%;
+  left: 10%;
+  box-shadow: 10px 10px 5px #888888;
+  width: 60em;
+  height: 40em;
+  opacity: 0.7;
+  position: relative;
+}
+/* line 48, sass/customer-styles.scss */
+.factory-container .factory img {
+  height: 100%;
+}
+/* line 52, sass/customer-styles.scss */
+.factory-container .info {
+  position: absolute;
+  width: 100%;
+  height: 5em;
+  top: 15%;
+  left: 35%;
+  text-align: center;
+}
+/* line 59, sass/customer-styles.scss */
+.factory-container .info h {
+  width: 100%;
+  font-size: 3em;
+  line-height: 1.5em;
+  opacity: 0;
+}
+/* line 66, sass/customer-styles.scss */
+.factory-container a {
+  top: 59%;
+  left: 72%;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  width: 14em;
+  height: 8em;
+  position: absolute;
+  opacity: 0.5;
+}
+/* line 76, sass/customer-styles.scss */
+.factory-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 87, sass/customer-styles.scss */
+.fact1 {
+  transition: 0.2s;
+  -webkit-transform: translate(-24.5em, 0em);
+  -moz-transform: translate(-24.5em, 0em);
+  -ms-transform: translate(-24.5em, 0em);
+  -o-transform: translate(-24.5em, 0em);
+  transform: translate(-24.5em, 0em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact1 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact1:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact1:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact1 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 91, sass/customer-styles.scss */
+.fact2 {
+  transition: 0.2s;
+  -webkit-transform: translate(-12.5em, 0em);
+  -moz-transform: translate(-12.5em, 0em);
+  -ms-transform: translate(-12.5em, 0em);
+  -o-transform: translate(-12.5em, 0em);
+  transform: translate(-12.5em, 0em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact2 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact2:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact2:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact2 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 95, sass/customer-styles.scss */
+.fact3 {
+  transition: 0.2s;
+  -webkit-transform: translate(-0.5em, 0em);
+  -moz-transform: translate(-0.5em, 0em);
+  -ms-transform: translate(-0.5em, 0em);
+  -o-transform: translate(-0.5em, 0em);
+  transform: translate(-0.5em, 0em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact3 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact3:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact3:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact3 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 99, sass/customer-styles.scss */
+.fact4 {
+  transition: 0.2s;
+  -webkit-transform: translate(11.5em, 0em);
+  -moz-transform: translate(11.5em, 0em);
+  -ms-transform: translate(11.5em, 0em);
+  -o-transform: translate(11.5em, 0em);
+  transform: translate(11.5em, 0em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact4 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact4:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact4:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact4 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 103, sass/customer-styles.scss */
+.fact5 {
+  transition: 0.2s;
+  -webkit-transform: translate(-24.5em, 7.5em);
+  -moz-transform: translate(-24.5em, 7.5em);
+  -ms-transform: translate(-24.5em, 7.5em);
+  -o-transform: translate(-24.5em, 7.5em);
+  transform: translate(-24.5em, 7.5em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact5 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact5:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact5:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact5 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 107, sass/customer-styles.scss */
+.fact6 {
+  transition: 0.2s;
+  -webkit-transform: translate(-12.5em, 7.5em);
+  -moz-transform: translate(-12.5em, 7.5em);
+  -ms-transform: translate(-12.5em, 7.5em);
+  -o-transform: translate(-12.5em, 7.5em);
+  transform: translate(-12.5em, 7.5em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact6 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact6:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact6:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact6 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 111, sass/customer-styles.scss */
+.fact7 {
+  transition: 0.2s;
+  -webkit-transform: translate(-0.5em, 7.5em);
+  -moz-transform: translate(-0.5em, 7.5em);
+  -ms-transform: translate(-0.5em, 7.5em);
+  -o-transform: translate(-0.5em, 7.5em);
+  transform: translate(-0.5em, 7.5em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact7 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact7:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact7:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact7 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}
+
+/* line 115, sass/customer-styles.scss */
+.fact8 {
+  transition: 0.2s;
+  -webkit-transform: translate(11.5em, 7.5em);
+  -moz-transform: translate(11.5em, 7.5em);
+  -ms-transform: translate(11.5em, 7.5em);
+  -o-transform: translate(11.5em, 7.5em);
+  transform: translate(11.5em, 7.5em);
+  color: black;
+}
+/* line 10, sass/customer-styles.scss */
+.fact8 + #info {
+  background-color: yellow;
+  opacity: 0;
+}
+/* line 14, sass/customer-styles.scss */
+.fact8:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1.05em;
+}
+/* line 16, sass/customer-styles.scss */
+.fact8:hover + .info h {
+  color: black;
+  opacity: 0.7;
+}
+/* line 27, sass/customer-styles.scss */
+.fact8 .freeSpot {
+  height: 6em;
+  width: 10em;
+  -webkit-transform: translate(2.5em, 2em);
+  -moz-transform: translate(2.5em, 2em);
+  -ms-transform: translate(2.5em, 2em);
+  -o-transform: translate(2.5em, 2em);
+  transform: translate(2.5em, 2em);
+}

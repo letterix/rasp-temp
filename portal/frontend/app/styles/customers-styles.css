@@ -1,0 +1,311 @@
+/*mixins*/
+/* line 29, sass/customers-styles.scss */
+.circle-container {
+  position: relative;
+  opacity: 0.7;
+  text-align: center;
+  width: 40em;
+  height: 40em;
+  padding: 20em;
+  /*= 2em * 1.4 (2em = half the width of an img, 1.4 = sqrt(2))*/
+  border-radius: 50%;
+  margin-left: 14em;
+  margin-top: 3em;
+}
+/* line 30, sass/customers-styles.scss */
+.circle-container .center {
+  width: 30em;
+  height: 30em;
+  margin: -16em;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+/* line 37, sass/customers-styles.scss */
+.circle-container .info {
+  position: absolute;
+  width: 30em;
+  height: 30em;
+  margin: -16em;
+  border: dashed 1px;
+  border-radius: 50%;
+  display: inline-block;
+}
+/* line 45, sass/customers-styles.scss */
+.circle-container .info h {
+  text-align: center;
+  line-height: 10em;
+  vertical-align: middle;
+  opacity: 0;
+  font-size: 3em;
+}
+/* line 53, sass/customers-styles.scss */
+.circle-container a {
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8em;
+  height: 8em;
+  margin: -5em;
+  /* 2em = 4em/2 */
+  /* half the width */
+}
+/* line 62, sass/customers-styles.scss */
+.circle-container img {
+  display: block;
+  width: 100%;
+}
+
+/* line 76, sass/customers-styles.scss */
+.deg0 {
+  transition: 0.2s;
+  -webkit-transform: rotate(0deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(0deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(0deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(0deg) translate(17em) rotate(90deg);
+  transform: rotate(0deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg0 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg0:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg0:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* 12em = half the width of the wrapper */
+/* line 79, sass/customers-styles.scss */
+.lt-ie9 .deg0 {
+  margin-left: 20em;
+}
+
+/* line 82, sass/customers-styles.scss */
+.deg45 {
+  transition: 0.2s;
+  -webkit-transform: rotate(45deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(45deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(45deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(45deg) translate(17em) rotate(90deg);
+  transform: rotate(45deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg45 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg45:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg45:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 85, sass/customers-styles.scss */
+.lt-ie9 .deg45 {
+  margin: 12.97em;
+}
+
+/* line 89, sass/customers-styles.scss */
+.deg90 {
+  transition: 0.2s;
+  -webkit-transform: rotate(90deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(90deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(90deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(90deg) translate(17em) rotate(90deg);
+  transform: rotate(90deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg90 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg90:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg90:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 93, sass/customers-styles.scss */
+.deg135 {
+  transition: 0.2s;
+  -webkit-transform: rotate(135deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(135deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(135deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(135deg) translate(17em) rotate(90deg);
+  transform: rotate(135deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg135 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg135:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg135:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 96, sass/customers-styles.scss */
+.lt-ie9 .deg135 {
+  margin: 12.97em -20.97em;
+}
+
+/* line 99, sass/customers-styles.scss */
+.deg180 {
+  transition: 0.2s;
+  -webkit-transform: rotate(180deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(180deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(180deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(180deg) translate(17em) rotate(90deg);
+  transform: rotate(180deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg180 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg180:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg180:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 102, sass/customers-styles.scss */
+.lt-ie9 .deg180 {
+  margin-left: -28em;
+}
+
+/* line 105, sass/customers-styles.scss */
+.deg225 {
+  transition: 0.2s;
+  -webkit-transform: rotate(225deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(225deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(225deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(225deg) translate(17em) rotate(90deg);
+  transform: rotate(225deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg225 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg225:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg225:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 109, sass/customers-styles.scss */
+.lt-ie9 .deg225 {
+  margin: -20.97em;
+}
+
+/* line 113, sass/customers-styles.scss */
+.deg270 {
+  transition: 0.2s;
+  -webkit-transform: rotate(270deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(270deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(270deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(270deg) translate(17em) rotate(90deg);
+  transform: rotate(270deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg270 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg270:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg270:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 117, sass/customers-styles.scss */
+.lt-ie9 .deg225 {
+  margin: -20.97em;
+}
+
+/* line 122, sass/customers-styles.scss */
+.deg315 {
+  transition: 0.2s;
+  -webkit-transform: rotate(315deg) translate(17em) rotate(90deg);
+  -moz-transform: rotate(315deg) translate(17em) rotate(90deg);
+  -ms-transform: rotate(315deg) translate(17em) rotate(90deg);
+  -o-transform: rotate(315deg) translate(17em) rotate(90deg);
+  transform: rotate(315deg) translate(17em) rotate(90deg);
+  color: black;
+}
+/* line 10, sass/customers-styles.scss */
+.deg315 + #info {
+  opacity: 0;
+}
+/* line 13, sass/customers-styles.scss */
+.deg315:hover {
+  color: red;
+  font-weight: bold;
+  opacity: 1;
+  font-size: 1.1em;
+}
+/* line 15, sass/customers-styles.scss */
+.deg315:hover + .info h {
+  color: black;
+  opacity: 1;
+}
+
+/* line 125, sass/customers-styles.scss */
+.lt-ie9 .deg315 {
+  margin: -20.97em 12.97em;
+}

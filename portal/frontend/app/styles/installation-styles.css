@@ -1,0 +1,43 @@
+/* line 1, sass/installation-styles.scss */
+.grid-container {
+  box-shadow: 10px 10px 5px #888888;
+  background-color: white;
+  margin-left: 1em;
+  margin-top: 3em;
+  width: 60em;
+  height: 30em;
+  opacity: 0.2;
+}
+/* line 9, sass/installation-styles.scss */
+.grid-container .grid-card {
+  opacity: 1;
+  width: 100%;
+  height: 6em;
+  font-size: medium;
+}
+/* line 14, sass/installation-styles.scss */
+.grid-container .grid-card h {
+  opacity: 0;
+  padding-top: 5px;
+}
+/* line 18, sass/installation-styles.scss */
+.grid-container .grid-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 25, sass/installation-styles.scss */
+.grid-container .grid-card:hover {
+  transition: 0.2s;
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  opacity: 1;
+}
+/* line 32, sass/installation-styles.scss */
+.grid-container .grid-card:hover h {
+  opacity: 0.7;
+}
