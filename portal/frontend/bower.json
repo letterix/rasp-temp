@@ -25,5 +25,8 @@
     "ng-breadcrumbs": "~0.1.2",
     "angular-loading-bar": "latest",
     "angular-multi-select": "latest"
+  },
+  "resolutions": {
+    "angular": "1.4.6"
   }
 }

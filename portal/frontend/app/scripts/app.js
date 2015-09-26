@@ -4,7 +4,7 @@ var app = angular.module('app', ['ngRoute', 'ngTable', 'ngTableExport', 'cgBusy'
 
 app.config(function ($routeProvider, $provide) {
     $provide.constant('API_PATH', '/api/');
-    $provide.constant('LOGIN_PATH', '/login');
+    $provide.constant('LOGIN_PATH', '/login.html');
     $provide.constant('LOGOUT_PATH', '/logout');
 
     $routeProvider
@@ -111,4 +111,4 @@ function createLogoutTab($rootScope) {
         fontawesome: 'fa-sign-out',
         show:  true
     }
-} 
+}

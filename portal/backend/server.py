@@ -229,7 +229,6 @@ config.CONF['/sync_ws'] = {
 }
 
 ROOT = Root()
-
 cherrypy.engine.autoreload.unsubscribe()
 cherrypy.engine.timeout_monitor.unsubscribe()
 cherrypy.quickstart(ROOT, '/', config.CONF)
