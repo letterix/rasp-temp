@@ -24,7 +24,8 @@
     "angular-deckgrid": "~0.4.4",
     "ng-breadcrumbs": "~0.1.2",
     "angular-loading-bar": "latest",
-    "angular-multi-select": "latest"
+    "angular-multi-select": "latest",
+    "bootswatch-dist": "superhero"
   },
   "resolutions": {
     "angular": "1.4.6"

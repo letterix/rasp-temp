@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('app', ['ngRoute', 'ngTable', 'ngTableExport', 'cgBusy', 'ajoslin.promise-tracker', 'ui.bootstrap', 'ng-breadcrumbs', 'angular-loading-bar', 'multi-select']);
+var app = angular.module('app', ['ngRoute', 'ngTable', 'ngTableExport', 'cgBusy', 'ajoslin.promise-tracker', 'ui.bootstrap', 'ng-breadcrumbs', 'angular-loading-bar', 'isteven-multi-select']);
 
 
 app.config(function ($routeProvider, $provide) {
