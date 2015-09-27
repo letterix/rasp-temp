@@ -18,9 +18,9 @@ def update_controller(controller):
     return backend._exec(sql, controller.get('name'), controller.get('ip'), controller.get('installation'))
 
 
-def delete_controller(serial_number, controller_ip, name):
-    sql = """DELETE FROM controllers WHERE installation = %s, ip = %s, name = %s"""
-    return backend._exec(sql, serial_number, controller_ip, name)
+def delete_controller(serial_number, controller_ip):
+    sql = """DELETE FROM controllers WHERE installation = %s AND ip = %s"""
+    return backend._exec(sql, serial_number, controller_ip)
 
 
 def create_controller(controller):

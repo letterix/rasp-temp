@@ -8,8 +8,9 @@ app.controller('InstallationCtrl', function($scope, $location, $filter, api, uti
   $scope.alarms = 0;
   $scope.warnings = 0;
   $scope.normals = 0;
-  $scope.items = []
-  $scope.sorting = "alarms"
+  $scope.items = [];
+  $scope.sorting = "alarms";
+  $scope.canEditCustomer = false;
 
   // -- AUTHENTICATION AND ACCESSABILITY --
 
@@ -18,7 +19,7 @@ app.controller('InstallationCtrl', function($scope, $location, $filter, api, uti
   }
 
   $scope.canEdit = function() {
-    return AuthService.canEditCustomer($routeParams.customer)
+    return AuthService.canEditCustomer($routeParams.customer) && $scope.canEditCustomer;
   }
 
   $scope.canCreate = function() {
@@ -105,13 +106,16 @@ app.controller('InstallationCtrl', function($scope, $location, $filter, api, uti
 
 	$scope.toggleEditing = function() {
 		$scope.editing = !$scope.editing;
-		$scope.toggleCogDropdown();
 	}
 
 	$scope.deleteItem = function(item) {
-    api.get("controller/" + $routeParams.installation + "?controller_ip=" + item.ip, function(result) {
+    api.doDelete("controller/" + $routeParams.installation + "?controller_ip=" + item.ip, function(result) {
       //success
+      console.log('BEPA')
       $route.reload();
+    }, function(error) {
+      console.log('apa')
+      console.log(error)
     });
 	}
 
@@ -175,7 +179,7 @@ app.controller('InstallationCtrl', function($scope, $location, $filter, api, uti
     })
   });
   api.get('authentication/' + $routeParams.customer + "?changes=True", function(result) {
-    $scope.canEdit = result;
+    $scope.canEditCustomer = result;
   });
 
     // -- INIT --
@@ -185,7 +189,7 @@ app.controller('InstallationCtrl', function($scope, $location, $filter, api, uti
   /* -- THE LOOP -- */
   var intervalPromise = $interval(function () {
     $scope.getItem();
-  }, 10000);    
+  }, 10000);
   /* -- LOOP END -- */
 
   $scope.$on('$destroy', function () { $interval.cancel(intervalPromise); });
