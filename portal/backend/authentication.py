@@ -103,7 +103,7 @@ def has_full_access(user):
     return user['role'] in super_roles()
 
 
-def user_is_assigned_customer(customer, user):
+def user_is_assigned_customer(user, customer):
     return customer['id'] in [d['customer'] for d in assigneesHandler.get_customers(user.get('username'))]
 
 
@@ -113,7 +113,7 @@ def user_is_assigned_master(user):
 
 
 def user_can_view_customer(user, customer):
-    return user_is_assigned_customer(customer, user) or user_is_assigned_master(user)
+    return user_is_assigned_customer(user, customer) or user_is_assigned_master(user)
 
 
 def user_is_admin(user):
@@ -128,8 +128,8 @@ def user_is_master(user):
 def allow_viewing(customer_id):
     result = False
     user = cherrypy.session.get('user')
-    customer = customerHandler.get_customer(customer_id)
-    if customer:
+    customer = customerHandler.get_customer(customer_id) if customer_id != None else None
+    if customer and customer_id:
         if user_can_view_customer(user, customer):
             result = True
     if has_full_access(user):
