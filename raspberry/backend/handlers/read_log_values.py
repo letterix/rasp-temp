@@ -23,7 +23,7 @@ def _read_all_parameters_internal():
     tags = tag_dao.get_tags()
     num_logs_read = 0
     for tag in tags:
-        #current_value = modbus_connector.get_value(tag)
+        #current_value = modbus_connector.get_value(tag) :: Put this in the log_item['value'] instead of 666
 
         log_item = {
             'name': tag['name'],
