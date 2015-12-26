@@ -14,8 +14,8 @@ CHECK_ESBE_SETTINGS_FREQUENCY = 120
 READ_LOG_VALUES_FREQUENCY = 15
 
 SYNC = {
-    'url': 'ws://127.0.0.1:1444/sync_ws'
-    #'url': 'ws://141.255.189.241:1444/sync_ws'
+    #'url': 'ws://127.0.0.1:1444/sync_ws'
+    'url': 'ws://141.255.189.241:1444/sync_ws'
 }
 
 
